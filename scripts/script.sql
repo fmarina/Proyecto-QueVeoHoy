@@ -19,3 +19,7 @@ CREATE TABLE `genero`(
     `nombre` VARCHAR(50) NOT NULL,
     PRIMARY KEY (`id`)
 );
+
+ALTER TABLE `pelicula` ADD COLUMN `genero_id` INT
+
+

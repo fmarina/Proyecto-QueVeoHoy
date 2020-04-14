@@ -13,3 +13,9 @@ CREATE TABLE `pelicula` (
     `trama` VARCHAR(700),
     PRIMARY KEY(`id`)
 );
+
+CREATE TABLE `genero`(
+    `id` INT NOT NULL auto_increment,
+    `nombre` VARCHAR(50) NOT NULL,
+    PRIMARY KEY (`id`)
+);

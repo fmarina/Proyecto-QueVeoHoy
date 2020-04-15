@@ -14,7 +14,11 @@
                 
                 pelicula = data.pelicula;
                 actores = data.actores;
-                genero = data.pelicula.nombre;
+                genero = data.pelicula.genero;
+
+                console.log("data.pelicula", pelicula);
+                console.log("data.actores ", actores);
+                console.log("data.genero ", genero);
 
                 $(".imagen").attr("src", pelicula.poster);
                 $(".titulo, title").html(pelicula.titulo + " (" + pelicula.anio + ")");
@@ -29,7 +33,7 @@
                 for (i = 0; i < actores.length; i++) {
                     actores_string += actores[i].nombre + ", "
                 }
-                $(".actores").html(actores_string.slice(0, -2));
+                $(".actores").html(actores_string.slice(0, -2));                
             },
             //esta función recibe como parámetro el id de una película y se encarga de pedirle al backend la información de la misma.
             this.obtenerPelicula = function(id) {

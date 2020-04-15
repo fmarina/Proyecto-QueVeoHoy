@@ -30,6 +30,14 @@ CREATE TABLE `actor`(
     PRIMARY KEY(`id`)
 );
 
+CREATE TABLE `actor_pelicula`(
+    `id` INT NOT NULL auto_increment,
+    `actor_id` INT,
+    `pelicula_id` INT,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`actor_id`) REFERENCES `actor` (`id`),
+    FOREIGN KEY (`pelicula_id`) REFERENCES `pelicula` (`id`)
+);
 
 
 

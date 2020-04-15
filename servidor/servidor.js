@@ -3,8 +3,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 
-var controladorPeliculas = require('./controladores/controladorPeliculas');
-var controladorGeneros = require('./controladores/controladorGeneros');
+const controladorPeliculas = require('./controladores/controladorPeliculas');
+const controladorGeneros = require('./controladores/controladorGeneros');
 
 var app = express();
 

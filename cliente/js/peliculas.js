@@ -118,6 +118,7 @@ function ControladorPeliculas() {
         //esta función recibe como parámetro el total de películas que se obtienen como resultado. Según esa cantidad 
         //crea los botones de la paginación y les da la funcionalidad correspondiente
         this.cargarBotones = function(total) {
+            console.log("Cantidad total de peliculas que se obtienen como resultado ", total);
             //se establece que se van a mostrar 52 resultados por pagina
             var cantidad_por_pagina = 52;
             var self = this;

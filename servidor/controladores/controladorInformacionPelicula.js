@@ -30,5 +30,7 @@ function buscarInformacionPelicula(require, response){
     });   
 }
 
+module.exports = {buscarInformacionPelicula : buscarInformacionPelicula};
+
 
 

@@ -5,6 +5,8 @@ var cors = require('cors');
 
 const controladorPeliculas = require('./controladores/controladorPeliculas');
 const controladorGeneros = require('./controladores/controladorGeneros');
+const controladorInfoPelicula = require('./controladores/controladorInformacionPelicula');
+
 
 var app = express();
 
@@ -18,6 +20,7 @@ app.use(bodyParser.json());
 
 app.get("/peliculas", controladorPeliculas.buscarPeliculas);
 app.get("/generos", controladorGeneros.buscarGeneros);
+
 
 //seteamos el puerto en el cual va a escuchar los pedidos la aplicación
 var puerto = '8080';

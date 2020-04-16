@@ -6,6 +6,7 @@ var cors = require('cors');
 const controladorPeliculas = require('./controladores/controladorPeliculas');
 const controladorGeneros = require('./controladores/controladorGeneros');
 const controladorInfoPelicula = require('./controladores/controladorInformacionPelicula');
+const controladorRecomendaciones = require('./controladores/controladorRecomendaciones');
 
 var app = express();
 

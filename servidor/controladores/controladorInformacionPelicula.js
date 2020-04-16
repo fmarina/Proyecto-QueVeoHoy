@@ -10,12 +10,12 @@ function buscarInformacionPelicula(require, response){
     let sql_actores = 
         "select actor.id, actor.nombre from actor join actor_pelicula on actor_id = actor.id where pelicula_id = " + id;
     
-    conexion.query(sql, (err, resultado, fields)=>{
+    conexion.query(sql, (err, resultado)=>{
         if(err){
             console.log("Error en la consulta", err.message);
             return response.status(404).send("Hubo un error en la consulta de sql");
         }
-        conexion.query(sql_actores, (err, resultActores, fields)=>{
+        conexion.query(sql_actores, (err, resultActores)=>{
             if(err){
                 console.log("Error en la consulta", err.message);
                 return response.status(404).send("Hubo un error en la consulta actores");

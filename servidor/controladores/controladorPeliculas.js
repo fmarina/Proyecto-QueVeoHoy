@@ -26,7 +26,7 @@ function buscarPeliculas(require, response){
             if(err){
                 console.log("Hubo un error en la consulta sql_count", err.message);
                 return response.status(404).send("Hubo un error en la consulta");
-            }         
+            }      
             const respuesta = { 
                 'peliculas' : resultado,
                 'total'     : resultado2[0].total
@@ -42,7 +42,7 @@ const filtrarPeliculas = (anio, titulo, genero) =>{
         query = " WHERE ";
         if(anio)   query = `${query} anio = ${anio} AND`;                        
         if(titulo) query = `${query} titulo like '%${titulo}%' AND`;  
-        if(genero) query = `${query} genero_id = ${genero} AND`;        
+        if(genero) query = `${query} genero_id = ${genero} AND`;   
         query = query.split(' ').slice(0, -1).join(' ');                  
     }
     return query;

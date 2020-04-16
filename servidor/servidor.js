@@ -7,7 +7,6 @@ const controladorPeliculas = require('./controladores/controladorPeliculas');
 const controladorGeneros = require('./controladores/controladorGeneros');
 const controladorInfoPelicula = require('./controladores/controladorInformacionPelicula');
 
-
 var app = express();
 
 app.use(cors());
@@ -17,6 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
+
 
 app.get("/peliculas", controladorPeliculas.buscarPeliculas);
 app.get("/generos", controladorGeneros.buscarGeneros);

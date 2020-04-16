@@ -31,3 +31,4 @@ const filtroRecomendacion = (genero, inicio, fin, puntuacion)=>{
     return query;
 }
 
+module.exports = {buscarRecomendacion : buscarRecomendacion};
